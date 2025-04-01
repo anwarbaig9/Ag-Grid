@@ -19,12 +19,16 @@ ModuleRegistry.registerModules([
 ]);
 const styles = {
   container: {
-    width: "100%",
+    width: "90%",
     height: "600px",
     margin: "20px auto",
     border: "1px solid #ccc",
     borderRadius: "8px",
     boxShadow: "0 4px 8px hsla(0, 0.00%, 0.00%, 0.77)",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center", 
+    marginTop:"150px"
   },
   filterLabel: {
     fontWeight: "bold",
@@ -40,8 +44,7 @@ const myTheme = themeQuartz
     accentColor: "#71bb9c",
     headerBackgroundColor: "rgba(28, 62, 80, 0.24)",
     headerTextColor: "rgb(21, 24, 0)",
-    selectedRowBackgroundColor: "rgba(0, 125, 156, 0.1)",
-    oddRowBackgroundColor: "#8881",
+    selectedRowBackgroundColor: "rgba(124, 116, 47, 0.1)",
   })
   .withPart(iconSetMaterial)
   .withPart(colorSchemeLightCold);
@@ -56,25 +59,21 @@ const GridExample = () => {
         checkboxSelection: true,
         headerCheckboxSelection: true,
         headerCheckboxSelectionFilteredOnly: true,
-        headerClass: "center-header",
       },
       {
         headerName: "Name",
         field: "name",
         filterParams: { buttons: ["reset", "apply"] },
-        headerClass: "center-header",
       },
       {
         headerName: "Email",
         field: "email",
         filterParams: { buttons: ["reset", "apply"] },
-        headerClass: "center-header",
       },
       {
-        headerName: "Body",
+        headerName: "Title",
         field: "body",
         filterParams: { buttons: ["reset", "apply"] },
-        headerClass: "center-header",
       },
     ],
     []
